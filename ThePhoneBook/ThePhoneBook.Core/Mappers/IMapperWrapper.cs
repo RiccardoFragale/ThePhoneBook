@@ -1,12 +1,17 @@
 ﻿using AutoMapper;
 
-namespace ThePhoneBook.FrontendMvc.Mappers;
+namespace ThePhoneBook.Core.Mappers;
 
-public class AutoMapperExternal : IMapperWrapper
+public interface IMapperWrapper
+{
+    TDest Map<TSource, TDest>(TSource source);
+}
+
+public class Mapper : IMapperWrapper
 {
     private readonly IMapper _mapper;
 
-    public AutoMapperExternal(IMapper mapper)
+    public Mapper(IMapper mapper)
     {
         _mapper = mapper;
     }

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using ThePhoneBook.FrontendMvc.Features;
 using ThePhoneBook.FrontendMvc.Models;
 
 namespace ThePhoneBook.FrontendMvc.Controllers

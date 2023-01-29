@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using ThePhoneBook.FrontendMvc.Controllers;
 using ThePhoneBook.FrontendMvc.Models;
-using ThePhoneBook.FrontendMvc.Tests.Fixtures;
+using ThePhoneBook.Tests.Shared;
 
 namespace ThePhoneBook.FrontendMvc.Tests.Behaviours
 {
@@ -13,7 +13,7 @@ namespace ThePhoneBook.FrontendMvc.Tests.Behaviours
         private readonly BaseTestFixture _fixture;
         private readonly HttpClient _client;
 
-        public OpenDashboardTests(WebApplicationFactory<Program> factory, BaseTestFixture fixture)
+        public OpenDashboardTests(WebApplicationFactory<ProgramWrapper> factory, BaseTestFixture fixture)
         {
             _fixture = fixture;
             _client = _fixture.GenerateClient(factory);

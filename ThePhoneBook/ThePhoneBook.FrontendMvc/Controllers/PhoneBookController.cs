@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ThePhoneBook.FrontendMvc.Features;
-using ThePhoneBook.FrontendMvc.Mappers;
+﻿using Microsoft.AspNetCore.Mvc;
+using ThePhoneBook.Core.Features;
+using ThePhoneBook.Core.Mappers;
+using ThePhoneBook.Core.Models;
 using ThePhoneBook.FrontendMvc.Models;
 
 namespace ThePhoneBook.FrontendMvc.Controllers
@@ -9,9 +9,9 @@ namespace ThePhoneBook.FrontendMvc.Controllers
     public class PhoneBookController : Controller
     {
         private readonly IFetchContactsQueryFeature _fetchContactsFeature;
-        private readonly ICustomMapper<ContactDto, VmContact> _customMapper;
+        private readonly ICustomMapper<ContactModel, VmContact> _customMapper;
 
-        public PhoneBookController(IFetchContactsQueryFeature fetchContactsFeature, ICustomMapper<ContactDto, VmContact> customMapper)
+        public PhoneBookController(IFetchContactsQueryFeature fetchContactsFeature, ICustomMapper<ContactModel, VmContact> customMapper)
         {
             _fetchContactsFeature = fetchContactsFeature;
             _customMapper = customMapper;

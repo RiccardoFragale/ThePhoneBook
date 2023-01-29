@@ -1,4 +1,4 @@
-﻿namespace ThePhoneBook.FrontendMvc.Interfaces;
+﻿namespace ThePhoneBook.Core.Interfaces;
 
 public interface ICqrsQuery<TOut>
 {

@@ -1,4 +1,5 @@
 using AutoMapper;
+using ThePhoneBook.Core.Models;
 using ThePhoneBook.FrontendMvc.Models;
 
 namespace ThePhoneBook.FrontendMvc;
@@ -7,6 +8,6 @@ public class FrontendMappingProfile : Profile
 {
     public FrontendMappingProfile()
     {
-        CreateMap<ContactDto, VmContact>().ReverseMap();
+        CreateMap<ContactModel, VmContact>().ReverseMap();
     }
 }

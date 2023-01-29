@@ -1,4 +1,4 @@
-﻿namespace ThePhoneBook.FrontendMvc.Mappers;
+﻿namespace ThePhoneBook.Core.Mappers;
 
 public interface ICustomMapper<TSource, TDest>
 {

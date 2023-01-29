@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-
-namespace ThePhoneBook.FrontendMvc.Mappers;
+﻿namespace ThePhoneBook.Core.Mappers;
 
 public class CustomMapper<TSource, TDest> : ICustomMapper<TSource, TDest>
 {

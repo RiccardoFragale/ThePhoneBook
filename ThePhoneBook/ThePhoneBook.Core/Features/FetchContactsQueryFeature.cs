@@ -1,7 +1,7 @@
-﻿using ThePhoneBook.FrontendMvc.Interfaces;
-using ThePhoneBook.FrontendMvc.Models;
+﻿using ThePhoneBook.Core.Interfaces;
+using ThePhoneBook.Core.Models;
 
-namespace ThePhoneBook.FrontendMvc.Features
+namespace ThePhoneBook.Core.Features
 {
     public class FetchContactsQueryFeature : IFetchContactsQueryFeature
     {
@@ -12,7 +12,7 @@ namespace ThePhoneBook.FrontendMvc.Features
             _unitFetchContacts = unitFetchContacts;
         }
 
-        public IEnumerable<ContactDto> Execute()
+        public IEnumerable<ContactModel> Execute()
         {
             return _unitFetchContacts.Execute();
         }
