@@ -1,8 +1,7 @@
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using ThePhoneBook.Core;
-using ThePhoneBook.Core.Features;
-using ThePhoneBook.Core.Interfaces;
-using ThePhoneBook.Core.Mappers;
-using ThePhoneBook.Core.Mocks;
+using ThePhoneBook.Data;
 using ThePhoneBook.FrontendMvc;
 using ThePhoneBook.FrontendMvc.Controllers;
 
@@ -11,11 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-SharedLib.CommonConfigs(builder.Services);
+bool.TryParse(builder.Configuration["UseMocks"], out var useMocks);
+
+SharedLib.CommonConfigs(builder.Services, useMocks);
 
 builder.Services.AddTransient<PhoneBookController>();
 
 builder.Services.AddAutoMapper(typeof(FrontendMappingProfile));
+
 
 var app = builder.Build();
 

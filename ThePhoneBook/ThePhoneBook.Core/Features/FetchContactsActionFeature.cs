@@ -1,18 +1,20 @@
 ﻿using ThePhoneBook.Core.Interfaces;
 using ThePhoneBook.Core.Models;
+using ThePhoneBook.Core.Units;
+using ThePhoneBook.Data.Repositories;
 
 namespace ThePhoneBook.Core.Features
 {
-    public class FetchContactsQueryFeature : IFetchContactsQueryFeature
+    public class FetchContactsActionFeature : IFetchContactsActionFeature
     {
         private readonly IUnitFetchContacts _unitFetchContacts;
 
-        public FetchContactsQueryFeature(IUnitFetchContacts unitFetchContacts)
+        public FetchContactsActionFeature(IUnitFetchContacts unitFetchContacts)
         {
             _unitFetchContacts = unitFetchContacts;
         }
 
-        public IEnumerable<ContactModel> Execute()
+        public Task<IEnumerable<ContactModel>> Execute()
         {
             return _unitFetchContacts.Execute();
         }

@@ -8,22 +8,22 @@ namespace ThePhoneBook.FrontendMvc.Controllers
 {
     public class PhoneBookController : Controller
     {
-        private readonly IFetchContactsQueryFeature _fetchContactsFeature;
-        private readonly ICustomMapper<ContactModel, VmContact> _customMapper;
+        private readonly IFetchContactsActionFeature _fetchContactsFeature;
+        private readonly IMapperWrapper _mapper;
 
-        public PhoneBookController(IFetchContactsQueryFeature fetchContactsFeature, ICustomMapper<ContactModel, VmContact> customMapper)
+        public PhoneBookController(IFetchContactsActionFeature fetchContactsFeature, IMapperWrapper mapper)
         {
             _fetchContactsFeature = fetchContactsFeature;
-            _customMapper = customMapper;
+            _mapper = mapper;
         }
 
         // GET: PhoneBook
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            var contacts = _fetchContactsFeature.Execute();
+            var contacts = await _fetchContactsFeature.Execute();
             var viewModel = new VmDashboard
             {
-                Contacts = _customMapper.Map(contacts)
+                Contacts = _mapper.Map<ContactModel, VmContact>(contacts)
             };
 
             return View(viewModel);

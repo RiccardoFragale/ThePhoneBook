@@ -19,8 +19,8 @@ public class UnitFetchContactsMock : IUnitFetchContacts
         }
     };
 
-    public IEnumerable<ContactModel> Execute()
+    public Task<IEnumerable<ContactModel>> Execute()
     {
-        return _contacts;
+        return Task.FromResult(_contacts);
     }
 }

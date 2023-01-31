@@ -4,7 +4,8 @@ using ThePhoneBook.Core;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-SharedLib.CommonConfigs(builder.Services);
+bool.TryParse(builder.Configuration["UseMocks"], out var useMocks);
+SharedLib.CommonConfigs(builder.Services, useMocks);
 builder.Services.AddAutoMapper(typeof(ApiMappingProfile));
 
 builder.Services.AddControllers();

@@ -5,15 +5,19 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePhoneBook.FrontendMvc", "ThePhoneBook.FrontendMvc\ThePhoneBook.FrontendMvc.csproj", "{EB469F34-5944-477C-B8FF-E50EABC221EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePhoneBook.FrontendMvc.Tests", "ThePhoneBook.FrontendMvc.Tests\ThePhoneBook.FrontendMvc.Tests.csproj", "{D6B999F1-E39C-48EF-9490-FF8D09C84002}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePhoneBook.FrontendMvc.Tests", "ThePhoneBook.FrontendMvc.Tests\ThePhoneBook.FrontendMvc.Tests.csproj", "{D6B999F1-E39C-48EF-9490-FF8D09C84002}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePhoneBook.Api", "ThePhoneBook.Api\ThePhoneBook.Api.csproj", "{9CEFDCA6-9195-44F3-A4E6-D05314BAF854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePhoneBook.Api", "ThePhoneBook.Api\ThePhoneBook.Api.csproj", "{9CEFDCA6-9195-44F3-A4E6-D05314BAF854}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePhoneBook.Core", "ThePhoneBook.Core\ThePhoneBook.Core.csproj", "{34D1154F-4DEB-4B50-8368-128EFA9904DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePhoneBook.Core", "ThePhoneBook.Core\ThePhoneBook.Core.csproj", "{34D1154F-4DEB-4B50-8368-128EFA9904DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePhoneBook.Api.Tests", "ThePhoneBook.Api.Tests\ThePhoneBook.Api.Tests.csproj", "{44F1F73C-9B82-4AB8-AEE6-C724B3C44EC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePhoneBook.Api.Tests", "ThePhoneBook.Api.Tests\ThePhoneBook.Api.Tests.csproj", "{44F1F73C-9B82-4AB8-AEE6-C724B3C44EC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePhoneBook.Tests.Shared", "ThePhoneBook.Tests.Shared\ThePhoneBook.Tests.Shared.csproj", "{3CD71B29-88E7-4BFD-8EBD-AB7B70E3C9DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePhoneBook.Tests.Shared", "ThePhoneBook.Tests.Shared\ThePhoneBook.Tests.Shared.csproj", "{3CD71B29-88E7-4BFD-8EBD-AB7B70E3C9DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePhoneBook.Data", "ThePhoneBook.Data\ThePhoneBook.Data.csproj", "{EA44ED82-2676-46E5-9505-225F6D033C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePhoneBook.Shared", "ThePhoneBook.Shared\ThePhoneBook.Shared.csproj", "{E0785E0E-A10F-4F77-9F6C-CF3DE558A4F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{3CD71B29-88E7-4BFD-8EBD-AB7B70E3C9DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CD71B29-88E7-4BFD-8EBD-AB7B70E3C9DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CD71B29-88E7-4BFD-8EBD-AB7B70E3C9DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA44ED82-2676-46E5-9505-225F6D033C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA44ED82-2676-46E5-9505-225F6D033C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA44ED82-2676-46E5-9505-225F6D033C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA44ED82-2676-46E5-9505-225F6D033C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0785E0E-A10F-4F77-9F6C-CF3DE558A4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0785E0E-A10F-4F77-9F6C-CF3DE558A4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0785E0E-A10F-4F77-9F6C-CF3DE558A4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0785E0E-A10F-4F77-9F6C-CF3DE558A4F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,4 +15,9 @@ public class AutoMapperExternal : IMapperWrapper
     {
         return _mapper.Map<TSource, TDest>(source);
     }
+
+    public IEnumerable<TDest> Map<TSource, TDest>(IEnumerable<TSource> source)
+    {
+        return source.Select(x=> _mapper.Map<TSource, TDest>(x));
+    }
 }

@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using ThePhoneBook.Api.Models;
 using ThePhoneBook.Core.Features;
 using ThePhoneBook.Core.Mappers;
 using ThePhoneBook.Core.Models;
-using ContactDto = ThePhoneBook.Api.Models.ContactDto;
 
 namespace ThePhoneBook.Api.Controllers
 {
@@ -10,21 +10,21 @@ namespace ThePhoneBook.Api.Controllers
     [Route("[controller]")]
     public class PhoneBookController : ControllerBase
     {
-        private readonly IFetchContactsQueryFeature _fetchContactsFeature;
-        private readonly ICustomMapper<ContactModel, ContactDto> _customMapper;
+        private readonly IFetchContactsActionFeature _fetchContactsFeature;
+        private readonly IMapperWrapper _mapper;
 
-        public PhoneBookController(IFetchContactsQueryFeature fetchContactsFeature, ICustomMapper<ContactModel, ContactDto> customMapper)
+        public PhoneBookController(IFetchContactsActionFeature fetchContactsFeature, IMapperWrapper mapper)
         {
             _fetchContactsFeature = fetchContactsFeature;
-            _customMapper = customMapper;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public IEnumerable<ContactDto> Get()
+        public async Task<IEnumerable<ContactDto>> Get()
         {
-            var model = _fetchContactsFeature.Execute();
+            var model = await _fetchContactsFeature.Execute();
 
-            return _customMapper.Map(model);
+            return _mapper.Map<ContactModel, ContactDto>(model);
         }
     }
 }
